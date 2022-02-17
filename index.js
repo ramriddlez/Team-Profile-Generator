@@ -5,6 +5,8 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const { type } = require('os');
 const teamArray = [];
+const generateMarkdown = require('./assets/index.html')
+const generateCards = require('')
 
 function init() {
    inquirer.prompt([
@@ -25,9 +27,9 @@ function init() {
                 type: "input"
             },
             {
-                name: "ID",
+                name: "Id",
                 message: "What is your ID Number?",
-                type: "input"
+                type: "number"
                 //add validate function to validate if number between 1-10
             },
             {
@@ -64,9 +66,9 @@ function init() {
                     type: "input"
                 },
                 {
-                    name: "ID",
+                    name: "Id",
                     message: "What is your ID Number?",
-                    type: "input"
+                    type: "number"
                 },
                 {
                     name: "officenumber",
@@ -86,29 +88,83 @@ function init() {
                         }
                     }
                 }
-                ]).then(function (data) {
+            ]).then(function (data) {
                 //variablizing using the Manager child class
                 const newManager = new Manager(data.name, data.Id, data.email, data.officenumber);
                 teamArray.push(newManager);
                 addUser();
-                }) 
-            }    
-        console.log(teamArray)
+            });
+            
+        } else if (data.role === "Intern") {
+            inquirer.prompt([
+                {
+                    name:"name",
+                    questions:"What is your name",
+                    type: "input"
+                },
+                {
+                    name: "Id",
+                    message: "What is your ID?",
+                    type: "number"
+                },
+                {
+                    name: "school",
+                    message: "What is your school?",
+                    type: "input"
+                },
+                {
+                    name: "email",
+                    message: "What is your Email?",
+                    type: "input",
+                    validate: function (name) {
+                        let valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(name)
+                        if (valid) {
+                            return true
+                        } else {
+                            return 'Please enter a proper email.'   
+                        }
+                    }
+                }
+            ]).then(function (data) {
+                //variablizing using the Engineer child class
+                const newIntern = new Intern(data.name, data.Id, data.email, data.school);
+                teamArray.push(newIntern );
+                addUser();
             })
         }
-    
+    })
+}    
+
+
 function addUser(){
-     inquirer.prompt([
+    inquirer.prompt([
         {   
             name: "continue",
             message: "Do you want to add another team member?",
             type: "confirm"
         }
-    ])
-        //     ]).then(function(confirmRes){
-        //         confirmRes.continue ? promptUser() : generateHTML()
-        //     })
-        };
+    ]).then(function(confirmRes){
+         confirmRes.continue ? init() : generateMarkdown
+    })
+
+};
+
+// .catch(function (err) {
+//     console.log(err);
+// });
+
+// function writeToFile(generateMarkdown, data) {
+//     fs.writeFile(generateMarkdown, data, (err) => {
+//         if (err) {
+//             return console.log(err);
+//         }
+//         console.log('success!')
+// })
+// };
+
+
+
+
 init();
 
 
