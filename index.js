@@ -144,7 +144,7 @@ function addUser(){
             type: "confirm"
         }
     ]).then(function(confirmRes){
-         confirmRes.continue ? init() : generateMarkdown
+         confirmRes.continue ? init() : generateMarkdown();
     })
 
 };
@@ -153,47 +153,22 @@ function addUser(){
 //     console.log(err);
 // });
 
-// function writeToFile(generateMarkdown, data) {
-//     fs.writeFile(generateMarkdown, data, (err) => {
-//         if (err) {
-//             return console.log(err);
-//         }
-//         console.log('success!')
-// })
-// };
+function writeToFile(generateMarkdown, data) {
+    fs.writeFile(generateMarkdown, data, (err) => {
+        if (err) {
+            return console.log(err);
+        }
+        console.log('success!')
+})
+};
 
 
 
 
 init();
 
+writeToFile();
 
-
-                //function writeToFile(generateMarkdown, data) {
-                    // fs.writeFile('./assets/index.html', newEngineer, (err) => {
-                    //   if (err) {
-                    //     return console.log(err);
-                    //   }
-                    //   console.log("Success!")
-                    // });
-
-
-                //console.log(newEngineer)
-       // })
-        //     }
-        // ).then((EngineerAnswers) => {
-        //         //variablizing using the Engineer child class
-        //         const newEngineer = new Engineer(EngineerAnswers.name, EngineerAnswers.id, EngineerAnswers.email, EngineerAnswers.github);
-
-        //         console.log(newEngineer);
-                
-
-        //     // }
-        // );        
-    
-// init();
-
-//console.log(data)
 
 
 //     {
