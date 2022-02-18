@@ -1,4 +1,4 @@
-function generateCards (data,role) {
+function generateCards (data) {
     return `<div class="card ml-5 mb-5" style="width: 18rem;">
     <h1 class="card-img-top bg-primary text-light">${data.name} <br> Engineer </h1> 
     <ul class="list-group list-group-flush">

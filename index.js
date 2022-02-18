@@ -32,7 +32,14 @@ function init() {
             {
                 name: "Id",
                 message: "What is your ID Number?",
-                type: "number"
+                type: "input",
+                validate: function isNumeric(name) {
+                    if(isNaN(name)){
+                        return ' enter numbers only'
+                      }else {
+                        return true
+                      }
+                }
                 //add validate function to validate if number between 1-10
             },
             {
@@ -72,12 +79,26 @@ function init() {
                 {
                     name: "Id",
                     message: "What is your ID Number?",
-                    type: "number"
+                    type: "input",
+                    validate: function isNumeric(name) {
+                        if(isNaN(name)){
+                            return ' enter numbers only'
+                          }else {
+                            return true
+                          }
+                    }
                 },
                 {
                     name: "officenumber",
                     message: "What is your office phone number?",
-                    type: "input"
+                    type: "input",
+                    validate: function isNumeric(name) {
+                        if(isNaN(name)){
+                            return ' enter numbers only'
+                          }else {
+                            return true
+                          }
+                    }
                 },
                 {
                     name: "email",
@@ -110,7 +131,14 @@ function init() {
                 {
                     name: "Id",
                     message: "What is your ID?",
-                    type: "number"
+                    type: "input",
+                    validate: function isNumeric(name) {
+                        if(isNaN(name)){
+                            return ' enter numbers only'
+                          }else {
+                            return true
+                          }
+                    }
                 },
                 {
                     name: "school",
@@ -166,6 +194,7 @@ function generateHTML() {
                     console.log("success!!")
                 }
         }) 
+
 }
 
 init();
