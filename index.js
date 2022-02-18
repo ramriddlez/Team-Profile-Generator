@@ -158,14 +158,26 @@ function addUser(){
 
 function generateHTML() {
     const team = teamArray.join("");
-    fs.appendFile(generateMarkdown, team, (err) => {
-        if (err) {
-          console.log(err);
-        } 
-        else {
-            console.log("success!!")
-        }
-});
+    fs.writeFile('./dist/index.html', generateMarkdown(team), (err) => {
+                if (err) {
+                  console.log(err);
+                } 
+                else {
+                    console.log("success!!")
+                }
+        }) 
+    
+    
+    // you need to pass data over to that function
+//     fs.writeFile(generateMarkdown, team, (err) => {
+//         if (err) {
+//           console.log(err);
+//         } 
+//         else {
+//             console.log("success!!")
+//         }
+// });
+
 }
 
 init();
