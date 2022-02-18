@@ -35,6 +35,6 @@ GitHub Profile: https://github.com/ramriddlez <br><br>
 Have any questions? Email me @ ramankangz@outlook.com
  <br><br>
  
- LINK TO DEPLOYED APPLICATION:
+ LINK TO DEPLOYED APPLICATION: https://ramriddlez.github.io/Team-Profile-Generator/
   <br>
  LINKED TO VIDEO WALK-THROUGH:
