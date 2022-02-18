@@ -37,4 +37,4 @@ Have any questions? Email me @ ramankangz@outlook.com
  
  LINK TO DEPLOYED APPLICATION: https://ramriddlez.github.io/Team-Profile-Generator/
   <br>
- LINKED TO VIDEO WALK-THROUGH:
+ LINKED TO VIDEO WALK-THROUGH: https://drive.google.com/file/d/1hhUcWYWnla0JioaFYTTGi_OIKnRJO2vC/view?usp=sharing
