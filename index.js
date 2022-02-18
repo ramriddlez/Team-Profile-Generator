@@ -166,18 +166,6 @@ function generateHTML() {
                     console.log("success!!")
                 }
         }) 
-    
-    
-    // you need to pass data over to that function
-//     fs.writeFile(generateMarkdown, team, (err) => {
-//         if (err) {
-//           console.log(err);
-//         } 
-//         else {
-//             console.log("success!!")
-//         }
-// });
-
 }
 
 init();
