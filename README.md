@@ -3,7 +3,6 @@
 * [Description](#desc) <br>
 * [Installation](#install) <br>
 * [Usage](#usage) <br>
-* [Contributing](#contributing) <br>
 * [Tests](#tests) <br>
 * [License](#license) <br>
 * [Questions](#questions) <br>
@@ -16,10 +15,15 @@ In this Node.JS application, we utilize TDD (test-driven development) to test ou
 npm install -y
 
 ## Usage
-
+This is the passing of TESTS on code:
+![image](https://user-images.githubusercontent.com/96890575/154616926-a2f39f00-8602-410b-8bfe-37be2023bd7b.png)
+<br>
+this is the output HTML product directly from our Node.js CLI! :
+![image](https://user-images.githubusercontent.com/96890575/154617020-21907306-8742-4be7-a594-4a23b1d319a1.png)
 
 ## Tests
-TDD jest testing
+TDD -> jest testing
+<br>
 ## License
 Copyright [2021] [Ramandeep Singh]
 
