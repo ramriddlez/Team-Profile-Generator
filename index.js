@@ -156,59 +156,16 @@ function addUser(){
 
 };
 
-// .catch(function (err) {
-//     console.log(err);
-// });
-
-
-// function writeToFile(generateMarkdown, data) {
-//     const data = teamArray;
-//     fs.writeFile(generateMarkdown, newFile, (err) => {
-//         if (err) {
-//             return console.log(err);
-//         }
-//         console.log('success!')
-// })
-// };
-
-
-// writeToFile();
+function generateHTML() {
+    const team = teamArray.join("");
+    fs.appendFile(generateMarkdown, team, (err) => {
+        if (err) {
+          console.log(err);
+        } 
+        else {
+            console.log("success!!")
+        }
+});
+}
 
 init();
-
-
-
-
-
-//     {
-//       // Description
-//       type: 'input',
-//       message: 'Add a description for your project:',
-//       name: 'description',
-//     },
-//     {
-//       // How to install
-//       type: 'input',
-//       message: 'Provide your installation instructions:',
-//       name: 'install',
-//     },
-
-
-// //write function on writing to the generateMardown file
-// function writeToFile(generateMarkdown, data) {
-//     fs.writeFile(generateMarkdown, data, (err) => {
-//       if (err) {
-//         return console.log(err);
-//       }
-//       console.log("Success!")
-//     });
-//   }
-  
-//   //initialize the entire document -- ask questions, init writeToFile function then use generatemarkdown data to write a new file 
-//   function init() {
-//     inquirer.prompt(questions)
-//       .then((data) => {
-//         const response = generateMarkdown(data);
-//         const filename = `${data.title}_README.md`;
-//         writeToFile(filename, response)
-//       })
