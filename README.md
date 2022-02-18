@@ -8,20 +8,22 @@
 * [License](#license) <br>
 * [Questions](#questions) <br>
 ## Description
-${data.description}
+This is a Node.js application using file system to generate an HTML file using CLI. We use Object Oriented Programming to extend parent classes into multiple roles, mimicking a team display.
+
+In this Node.JS application, we utilize TDD (test-driven development) to test our code before initialization, using JEST technologies.
+
 ## Installation
-${data.install}
+npm install -y
 ## Usage
 ${data.usage}
 ## Contribution Guidelines
 ${data.contribution}
 ## Tests
-${data.test}
+TDD jest testing
 ## License
 ${data.license} <br><br>
 ${licensesection}<br><br>
 ${licenselink}
 ## Questions
-GitHub Profile: https://github.com/${data.github} <br><br>
-Have any questions? Email me @ ${data.email}!
-`
+GitHub Profile: https://github.com/ramriddlez <br><br>
+Have any questions? Email me @ ramankangz@outlook.com
