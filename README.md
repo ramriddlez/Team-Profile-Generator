@@ -33,3 +33,8 @@ Unless required by applicable law or agreed to in writing, software distributed 
 ## Questions
 GitHub Profile: https://github.com/ramriddlez <br><br>
 Have any questions? Email me @ ramankangz@outlook.com
+ <br><br>
+ 
+ LINK TO DEPLOYED APPLICATION:
+  <br>
+ LINKED TO VIDEO WALK-THROUGH:
