@@ -11,7 +11,7 @@ function generateHTML (data) {
         <body>
             <div class="jumbotron jumbotron-fluid bg-danger text-light">
                 <div class="container">
-                    <h1 class="display-4">My Team</h1>
+                    <h1 class="position-absolute top-50 start-50 translate-middle">My Team</h1>
                 </div>
             </div>
             <div class="row">
