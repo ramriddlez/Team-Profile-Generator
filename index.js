@@ -5,8 +5,11 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const { type } = require('os');
 const teamArray = [];
-const generateMarkdown = require('./assets/index.html')
-const generateCards = require('')
+const generateMarkdown = require('./assets/index')
+const generateIntern = require('./src/generateIntern')
+const generateEngineer = require('./src/generateEngineer')
+const generateManager = require('./src/generateManager');
+const { data } = require('browserslist');
 
 function init() {
    inquirer.prompt([
@@ -54,7 +57,8 @@ function init() {
             ]).then(function (data) {
                 //variablizing using the Engineer child class
                 const newEngineer = new Engineer(data.name, data.Id, data.email, data.github);
-                teamArray.push(newEngineer);
+                const nerd = generateEngineer(newEngineer)
+                teamArray.push(nerd)
                 addUser();
             })
             
@@ -91,7 +95,8 @@ function init() {
             ]).then(function (data) {
                 //variablizing using the Manager child class
                 const newManager = new Manager(data.name, data.Id, data.email, data.officenumber);
-                teamArray.push(newManager);
+                const bigBoss = generateManager(newManager)
+                teamArray.push(bigBoss)
                 addUser();
             });
             
@@ -128,12 +133,14 @@ function init() {
             ]).then(function (data) {
                 //variablizing using the Engineer child class
                 const newIntern = new Intern(data.name, data.Id, data.email, data.school);
-                teamArray.push(newIntern );
+                const newbie = generateIntern(newIntern)
+                teamArray.push(newbie)
                 addUser();
             })
         }
     })
 }    
+
 
 
 function addUser(){
@@ -144,7 +151,7 @@ function addUser(){
             type: "confirm"
         }
     ]).then(function(confirmRes){
-         confirmRes.continue ? init() : generateMarkdown();
+         confirmRes.continue ? init() : generateHTML();
     })
 
 };
@@ -153,21 +160,23 @@ function addUser(){
 //     console.log(err);
 // });
 
-function writeToFile(generateMarkdown, data) {
-    fs.writeFile(generateMarkdown, data, (err) => {
-        if (err) {
-            return console.log(err);
-        }
-        console.log('success!')
-})
-};
+
+// function writeToFile(generateMarkdown, data) {
+//     const data = teamArray;
+//     fs.writeFile(generateMarkdown, newFile, (err) => {
+//         if (err) {
+//             return console.log(err);
+//         }
+//         console.log('success!')
+// })
+// };
 
 
-
+// writeToFile();
 
 init();
 
-writeToFile();
+
 
 
 
